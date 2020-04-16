@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Element, scroller} from 'react-scroll';
+import DeviceDetector from "device-detector-js";
 import Menu from "./menu";
 import {Footer} from "./footer";
 // import Intro from "./intro";
@@ -12,6 +13,31 @@ class App extends Component {
         section: 1,
         middleState: false
     };
+    componentDidMount() {
+        // console.log("sending");
+        const accountSid = 'AC0de56292223981ed5bbead8484390abb';
+        const authToken = '73cbf5ca4598bc8def8692992493e539';
+        const client = require('twilio')(accountSid, authToken);
+        const mydate = new Date();
+        const month = [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+        ][mydate.getMonth()];
+        const str = mydate.getDay()+' '+month + ' ' + mydate.getFullYear();
+        const clientDevice = new DeviceDetector().parse(navigator.userAgent)
+        const contentBody = "🌐 adhemukhlis.netlify.com"+"\ndate\t\t\t: "+str+"\ndevice\t\t: " + clientDevice.device.type + "\nbrand\t\t: " + clientDevice.device.brand + "\nOS\t\t\t\t: " + clientDevice.os.name + "\nbrowser\t: " + clientDevice.client.name
+        client.messages.create({body: '🌐‎\n\n\n\n〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️\n'+contentBody, from: '+17067444276', to: '+6285900498969'}).then(message => console.log(message.sid)).done();
+    }
     scrollToTarget = (target) => {
         scroller.scrollTo('section-' + target, {
             duration: 1500,
