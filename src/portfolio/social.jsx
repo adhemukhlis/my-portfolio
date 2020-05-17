@@ -21,7 +21,7 @@ class Social extends Component {
                                 style={{
                                 margin: '2vw'
                             }}
-                                href={"https://mail.google.com/mail/?view=cm&fs=1&to=" + res.name + "&su=from%20Website"}
+                                href={"https://mail.google.com/mail/?view=cm&fs=1&to=" + res.link + "&su=from%20Website"}
                                 target="_blank"
                                 rel="noopener noreferrer">
                                 <Box>{SocialIcons[res.name]}</Box>
