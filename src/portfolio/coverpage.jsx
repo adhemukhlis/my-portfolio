@@ -15,6 +15,7 @@ import {
 import injectSheet from 'react-jss'
 class CoverPage extends Component {
     render() {
+        const { userdata } = this.props
         const {
             Container_card,
             Image_card_img,
@@ -35,11 +36,9 @@ class CoverPage extends Component {
                         </figure>
                     </div>
                     <div style={Body_card}>
-                        <h3 className={Name_card}>Mukhlis Adhe Purwanto</h3>
-                        <p className={Job_card}>front-end developer</p>
-                        <p className={Bio_card}>
-                            saya membuat antarmuka indah yang sederhana, ramah, serta memiliki performa yang
-                            optimal!</p>
+                        <h3 className={Name_card}>{userdata.fullname}</h3>
+                        <p className={Job_card}>{userdata.job}</p>
+                        <p className={Bio_card}>{userdata.bio}</p>
                     </div>
                 </div>
             </section>

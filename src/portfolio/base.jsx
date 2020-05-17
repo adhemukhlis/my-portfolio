@@ -4,35 +4,32 @@ import AboutPage from "./aboutme"
 import Work from "./work";
 import Skills from "./skills";
 import {Footer} from "./footer";
-const url = "https://raw.githubusercontent.com/adhemukhlis/my-portfolio/master/properties.json"
+import {getData} from "../func"
 class Base extends Component {
-    componentDidMount(){  
-        fetch(url)
-        .then(function (response) {
-            if (response.status !== 200) {
-                console.log('Looks like there was a problem. Status Code: ' + response.status);
-                return
-            }
-            response
-                .json()
-                .then(function (data) {
-                    console.log(data.name)
-                })
-        })
-        .catch(function (err) {
-            console.log('Fetch Error :-S', err)
-        })
+    state = {
+        loaded: false,
+        userdata: null
+    }
+
+    setData = (data) => {
+        this.setState({loaded: true, userdata: data})
+    }
+    componentDidMount() {
+        console.log(window.ClientID)
+        console.log(window.location)
+        getData((data) => this.setData(data))
     }
     render() {
-        return (
-            <div>
-                <CoverPage/>
-                <AboutPage/>
-                <Work/>
-                <Skills/>
-                <Footer/>
-            </div>
-        )
+        const {loaded, userdata} = this.state
+        return (loaded
+            ? <div>
+                    <CoverPage userdata={userdata}/>
+                    <AboutPage userdata={userdata}/>
+                    <Work/>
+                    <Skills/>
+                    <Footer/>
+                </div>
+            : null)
     }
 }
 export default Base;

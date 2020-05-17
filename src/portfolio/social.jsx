@@ -12,7 +12,7 @@ class Social extends Component {
             "email": <IcLightEnvelope fill={BLACK4} height="8vh"/>
         }
         const Box = posed.div(ConfigBoxPosed);
-        const {data, social_data} = this.props;
+        const { social_data} = this.props;
         return (
             <div style={SocialNetwork}>
                 {social_data.map(res => {
