@@ -17,7 +17,7 @@ class Social extends Component {
             <div style={SocialNetwork}>
                 {social_data.map(res => {
                     return (res.name === 'email'
-                        ? <a
+                        ? <a key={res.name}
                                 style={{
                                 margin: '2vw'
                             }}
@@ -26,7 +26,7 @@ class Social extends Component {
                                 rel="noopener noreferrer">
                                 <Box>{SocialIcons[res.name]}</Box>
                             </a>
-                        : <a
+                        : <a key={res.name}
                             style={{
                             margin: '2vw'
                         }}

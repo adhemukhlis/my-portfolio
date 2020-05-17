@@ -1,3 +1,20 @@
 {
-    "name":"mukhlis"
+    "fullname": "mukhlis",
+    "job": "front-end developer",
+    "bio": "saya membuat antarmuka indah yang sederhana, ramah, serta memiliki performa yang optimal!",
+    "contact": [
+        {
+            "name": "facebook",
+            "link": "https://www.facebook.com/mukhlisadhepurwanto"
+        }, {
+            "name": "github",
+            "link": "https://github.com/adhemukhlis/"
+        }, {
+            "name": "instagram",
+            "link": "https://www.instagram.com/mukhlisadhe/"
+        }, {
+            "name": "email",
+            "link": "adhemukhlis@gmail.com"
+        }
+    ]
 }
