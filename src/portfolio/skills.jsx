@@ -8,13 +8,12 @@ import {
     IcBrandAndroid,
     IcBrandJava,
 
-    IcSolidShapes,
-   
+    IcSolidShapes
 } from "./react-icon-svg";
 import {
     TitleDark,
 
-    $Title,
+    Title,
     $SkillLists,
     $ListItems,
     $SkillItemText,
@@ -24,7 +23,7 @@ class Skills extends Component {
     render() {
         return (
             <div style={Container_skillpage}>
-                <div style={$Title}>
+                <div style={Title}>
                     <IcSolidShapes
                         style={{
                         marginRight: '2vw'

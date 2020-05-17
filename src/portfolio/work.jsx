@@ -1,13 +1,6 @@
 import React, {Component} from 'react';
 import Card from "./card";
-import {
-    Container_workpage,
-    $Title,
- 
-    TitleDark,
-    BLACK4,
-    GridContainer
-} from "./style";
+import {Container_workpage, Title, TitleDark, BLACK4, GridContainer} from "./style";
 import {IcSolidLightbulbOn} from "./react-icon-svg";
 class Work extends Component {
     render() {
@@ -58,7 +51,7 @@ class Work extends Component {
         ];
         return (
             <div style={Container_workpage}>
-                <div style={$Title}><IcSolidLightbulbOn
+                <div style={Title}><IcSolidLightbulbOn
                     style={{
                 marginRight: '2vw'
             }}

@@ -2,7 +2,7 @@ export const BLACK1 = '#111';
 export const BLACK4 = '#444';
 export const BLACK3 = '#242320';
 export const BLACK5 = '#161616';
-export const WHITE = '#f5f5f5';
+export const WHITE = '#f2f2f2';
 
 export const responsive_size_width = 'calc(30vh + 20vw)'
 export const responsive_size_height = 'calc(60vh + 5vw)'
@@ -67,7 +67,7 @@ export const Container_card = {
     width: responsive_size_width,
     height: responsive_size_height,
     fontSize: fontOrigin,
-    borderRadius: '16px',
+    borderRadius: '48px',
     boxShadow: '0 18px 30px -12px rgb(17, 17, 17,0.35)',
     // boxShadow: '0 16px 60px rgba(0, 0, 0, 0.3)',
     cursor: 'pointer',
@@ -78,7 +78,7 @@ export const Container_card = {
         // boxShadow: '0 40px 130px rgba(0, 0, 0, 0.6)',
         '-webkit-transform': 'scale(1.1, 1.1)',
         transform: 'scale(1.1, 1.1)',
-        borderRadius: '20px'
+        borderRadius: '48px'
     },
     '&:hover $Image_card_img': {
         '-webkit-transform': 'scale(1, 1)',
@@ -349,6 +349,7 @@ export const TitleContainer = {
 }
 export const TitleLight = {
     ...TitleContainer,
+    marginBottom:'5vh',
     color: WHITE
 }
 export const TitleDark = {
@@ -357,17 +358,19 @@ export const TitleDark = {
 }
 export const Content_aboutme = {
     width: responsive_size_width,
-    marginTop: '5vh',
+    marginBottom: '5vh',
     textAlign: 'justify',
     lineHeight: '150%',
     color: WHITE,
     letterSpacing: '0.08rem'
 };
-export const $SocialNetwork = {
+export const SocialNetwork = {
+    width: responsive_size_width,
     display: 'flex',
     flex: 1,
     alignItems: 'flex-end',
-    justifyContent: 'center'
+    flexFlow: 'wrap',
+    justifyContent: 'space-between'
 };
 export const $ButonContainer = {
     marginTop: '20px',
@@ -400,7 +403,7 @@ export const $img = {
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center'
 };
-export const $Title = {
+export const Title = {
     width: '100vw',
     marginBottom: '5vw',
     marginTop: '10vh',

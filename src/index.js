@@ -1,12 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-
-// import './portfolio/card/style.css'
-import App from './portfolio/profile';
+import Base from './portfolio/base'
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App/>, document.getElementById('root'));
+ReactDOM.render(<Base/>, document.getElementById('root'));
 
 serviceWorker.register({
     onUpdate: registration => {
