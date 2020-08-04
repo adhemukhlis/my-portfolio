@@ -1,21 +1,25 @@
 import React, {Component} from 'react'
 import SocialNetwork from "./social";
 import {Container_aboutme, Content_aboutme, TitleLight} from "./style"
+import {initGlobalState, connectToState, getState} from "../global-state/global-state";
+import {StringBuilder} from "../func"
+initGlobalState();
 class AboutPage extends Component {
-    getOld = () => {
-        return 1900 + new Date().getYear() - 1998
+    state = {
+        userdata: getState("_globalUserData")
+    }
+    componentDidMount() {
+        connectToState(["_globalUserData"], stream => this.setState({userdata: stream._globalUserData}))
     }
     render() {
-        const {userdata} = this.props
+        const {userdata} = this.state
         return (
             <div style={Container_aboutme}>
                 <h1 style={TitleLight}>
                     Tentang saya
                 </h1>
                 <div style={Content_aboutme}>
-                    {"Hai, nama saya Mukhlis Adhe Purwanto, saya berumur "}
-                    {this.getOld()}
-                    {" tahun. saya mahasiswa Institut Teknologi Telkom Purwokerto. saya tertarik dengan dunia Software Engineering yang memiliki motivasi dan semangat di bidang teknologi kreatif dan inovasi. saya sangat suka membangun software indah yang sederhana, ramah serta memiliki performa yang optimal, senang jika dapat bertemu dengan kamu dilain waktu."}
+                    {StringBuilder(userdata.about_me)}
                 </div>
                 <SocialNetwork social_data={userdata.contact}/>
             </div>

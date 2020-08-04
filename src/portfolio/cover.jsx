@@ -13,9 +13,17 @@ import {
     Bio_card
 } from './style'
 import injectSheet from 'react-jss'
+import {initGlobalState, connectToState, getState} from "../global-state/global-state"
+initGlobalState();
 class CoverPage extends Component {
+    state = {
+        userdata: getState("_globalUserData")
+    }
+    componentDidMount() {
+        connectToState(["_globalUserData"], stream => this.setState({userdata: stream._globalUserData}))
+    }
     render() {
-        const { userdata } = this.props
+        const {userdata} = this.state
         const {
             Container_card,
             Image_card_img,

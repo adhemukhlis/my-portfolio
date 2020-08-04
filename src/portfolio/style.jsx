@@ -6,7 +6,7 @@ export const WHITE = '#f2f2f2';
 
 export const responsive_size_width = 'calc(30vh + 20vw)'
 export const responsive_size_height = 'calc(60vh + 5vw)'
-export const font = '"Ubuntu Mono", monospace';
+export const font = '"Lato", sans-serif';
 export const fontOrigin = '1rem';
 export const fontSmall = '0.80em';
 export const fontMedium = '0.875em';
@@ -21,6 +21,10 @@ export const basic_container = {
     alignItems: 'center',
     width: '100%',
     minHeight: '100vh'
+}
+export const loading_container = {
+    ...basic_container,
+    justifyContent: 'center',
 }
 export const Container_coverpage = {
     ...basic_container,
@@ -63,7 +67,7 @@ export const Container_card = {
     overflow: 'hidden',
     display: 'block',
     padding: 'calc(2vh + 4vw)',
-    
+
     width: responsive_size_width,
     height: responsive_size_height,
     fontSize: fontOrigin,
@@ -178,7 +182,7 @@ export const Name_card = {
     color: 'white',
     zIndex: 1,
     fontSize: fontLarge,
-    fontWeight: fontLight,
+    fontWeight: fontRegular,
     letterSpacing: '0.1rem',
     textAlign: 'center',
     textTransform: 'uppercase',
@@ -195,7 +199,7 @@ export const Job_card = {
     display: 'inline-block',
     zIndex: 1,
     fontSize: fontSmall,
-    fontWeight: fontLight,
+    fontWeight: fontSmall,
     textAlign: 'center',
     letterSpacing: '0.26rem',
     color: 'rgba(90, 140, 255, 0.6)',
@@ -270,8 +274,8 @@ export const GridItem = {
     boxShadow: '0 18px 40px -12px rgb(17, 17, 17,0.35)',
     width: '50vh',
     backgroundColor: '#fcfcfc',
-    marginBottom: '2.4vw',
-    padding: '1.4vw',
+    marginBottom: 'calc(2.6vh + 1.6vw)',
+    padding: 'calc(1.6vh + 0.6vw)',
     color: '#333'
 }
 export const GridItemImage = {
@@ -349,7 +353,7 @@ export const TitleContainer = {
 }
 export const TitleLight = {
     ...TitleContainer,
-    marginBottom:'5vh',
+    marginBottom: '5vh',
     color: WHITE
 }
 export const TitleDark = {
@@ -381,13 +385,13 @@ export const $ButonContainer = {
 export const $Button = {
     backgroundColor: '#f0f0f0',
     display: 'flex',
-    width: '10vw',
+    width: 'calc(16vh + 4vw)',
     justifyContent: 'center',
     verticalAlign: 'top',
     padding: '8px',
     color: BLACK4,
     cursor: 'pointer',
-    borderRadius: '22px'
+    borderRadius: 'calc(16px + 2vh)'
 };
 export const $ImgContainer = {
     height: '100vh',
@@ -457,7 +461,7 @@ export const $SkillItemText = {
     color: '#969696'
 };
 export const $Footer = {
-    padding:'8vh',
+    padding: '8vh',
     display: 'flex',
     alignItems: 'flex-end',
     justifyContent: 'center',
