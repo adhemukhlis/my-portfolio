@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Portfolio from './Portfolio';
+import Portfolio from './portfolio/portfolio';
 import * as serviceWorker from './serviceWorker';
 import { DisableReactDevTools } from "./lib/devtool-killer";
 DisableReactDevTools( true );
