@@ -1,38 +1,15 @@
-import {getState} from "./global-state/global-state"
-const url = "https://raw.githubusercontent.com/adhemukhlis/my-portfolio/master/properties.jso" +"n"
-
-export const getData = (callback) => {
-    fetch(url)
-        .then(function (response) {
-            if (response.status !== 200) {
-                console.log('Looks like there was a problem. Status Code: ' + response.status);
-                return
-            }
-            response
-                .json()
-                .then(function (data) {
-                    console.log(data.fullname)
-                    callback(data)
-                })
-        })
-        .catch(function (err) {
-            console.log('Fetch Error :-S', err)
-        })
+const getAge = ( birthday ) => {
+	const ageDifMs = Date.now( ) - new Date( birthday ).getTime( );
+	const ageDate = new Date( ageDifMs );
+	return Math.abs( ageDate.getUTCFullYear( ) - 1970 );
 }
-const getOld = () => {
-    return 1900 + new Date().getYear() - getState("_globalUserData").year_of_birth
-}
-export function StringBuilder(str) {
+export function StringBuilder({ str, birthday }) {
 
-    var mapString = {
-        _getOld: getOld(),
-        // _dog: "DOG",
-        // _goat: "GOat"
-    };
-    // return str.replace(/_getOld|_dog|_goat/g, function (matched) {
-    //     return mapString[matched];
-    // });
-    return str.replace(/_getOld/g, function (matched) {
-        return mapString[matched];
-    });
+	var mapString = {
+		_getAge: getAge( birthday ),
+		// _dog: "DOG", _goat: "GOat"
+	};
+	return str.replace( /_getAge/g, function ( matched ) {
+		return mapString[matched];
+	});
 }

@@ -1,0 +1,46 @@
+{
+	"personal_info": {
+		"full_name": "Mukhlis Adhe Purwanto",
+		"birthday": "1998-05-05",
+		"job": "Front-end Developer",
+		"bio": "saya membuat antarmuka indah yang sederhana, ramah, serta memiliki performa yang optimal!",
+		"about_me": "Hai, nama saya Mukhlis Adhe Purwanto, saya berumur _getAge tahun. saya mahasiswa Institut Teknologi Telkom Purwokerto. saya tertarik dengan dunia Software Engineering yang memiliki motivasi dan semangat di bidang teknologi kreatif dan inovasi. saya sangat suka membangun software indah yang sederhana, ramah serta memiliki performa yang optimal, senang jika dapat bertemu dengan kamu dilain waktu."
+	},
+	"source_image": {
+		"cover_image": "./img/landscape.jpg",
+		"profile_image": "./img/pot.jpg"
+	},
+	"contact": [
+		{
+			"name": "facebook",
+			"link": "https://www.facebook.com/mukhlisadhepurwanto"
+		}, {
+			"name": "github",
+			"link": "https://github.com/adhemukhlis"
+		}, {
+			"name": "instagram",
+			"link": "https://www.instagram.com/mukhlisadhe"
+		}, {
+			"name": "email",
+			"link": "adhemukhlis@gmail.com"
+		}
+	],
+	"my_works": [
+		{
+			"img_url": "./img/goniki.png",
+			"date": "08 Agustus 2018",
+			"title": "Goniki: Fasilitas Umum Map Based",
+			"caption": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima totam laudantiu"
+		}, {
+			"img_url": "./img/cubar.png",
+			"date": "05 February 2019",
+			"title": "Cubar: Bermain Game Bareng Temen",
+			"caption": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima totam laudantiu"
+		}, {
+			"img_url": "./img/goniki.png",
+			"date": "08 Agustus 2018",
+			"title": "Goniki: Fasilitas Umum Map Based",
+			"caption": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima totam laudantiu"
+		}
+	]
+}
